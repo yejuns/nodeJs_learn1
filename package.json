@@ -2,9 +2,11 @@
   "name": "nodejs_learn",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "bin/www.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"cross-env NODE_ENV=dev nodemon ./bin/www.js",
+    "prd":"creoo-env NODE_ENV=production nodemon ./bin/www.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/yejuns/nodeJs_learn1/issues"
   },
-  "homepage": "https://github.com/yejuns/nodeJs_learn1#readme"
+  "homepage": "https://github.com/yejuns/nodeJs_learn1#readme",
+  "bin": {
+    "nodejs_learn": "www.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
 }

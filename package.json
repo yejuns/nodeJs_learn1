@@ -5,8 +5,8 @@
   "main": "bin/www.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"cross-env NODE_ENV=dev nodemon ./bin/www.js",
-    "prd":"creoo-env NODE_ENV=production nodemon ./bin/www.js"
+    "dev": "cross-env NODE_ENV=dev nodemon ./bin/www.js",
+    "prd": "creoo-env NODE_ENV=production nodemon ./bin/www.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,8 @@
     "test": "test"
   },
   "dependencies": {
-    "mysql": "^2.17.1"
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.1"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"

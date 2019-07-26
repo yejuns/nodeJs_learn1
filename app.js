@@ -63,7 +63,6 @@ const serverHandle =(req,res)=>{
        
 
         //处理user路由
-
         const userData=handleUserRouter(res,req)
         if(userData){
             res.end(
@@ -86,11 +85,14 @@ const serverHandle =(req,res)=>{
 
     //处理user路由
 
-    const userData=handleUserRouter(res,req)
-    if(userData){
-        res.end(
-            JSON.stringify(blogData)
-        )
+    const userResult=handleUserRouter(res,req)
+
+    if(userResult){
+        userResult.then(userData=>{
+            res.end(
+                JSON.stringify(blogData)
+            )
+        })
         return 
     }
 
